@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>KAI | Privacy Policy</title>
+    <!-- Google Fonts + Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Onest', sans-serif;
+            background: #ffffff;
+            color: #11181c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* header - glass effect (consistent with homepage) */
+        .site-header {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eef2f0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 16px 0;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 1.9rem;
+            color: #e45c5c;
+        }
+
+        .brand-short {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(130deg, #1e2b2c, #c24b4b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2a3a3f;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #e45c5c;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 24px;
+            font-size: 1.3rem;
+        }
+
+        .header-icons i {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .header-icons i:hover {
+            transform: translateY(-2px);
+            color: #e45c5c;
+        }
+
+        /* Privacy header */
+        .privacy-header {
+            background: #fefaf7;
+            padding: 48px 0 24px 0;
+            border-bottom: 1px solid #f0eae4;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e2b2c;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .privacy-header h1 i {
+            color: #e45c5c;
+            font-size: 2rem;
+        }
+
+        .last-updated {
+            color: #7b8e94;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* privacy content layout */
+        .privacy-content {
+            max-width: 1000px;
+            margin: 48px auto 80px auto;
+            background: white;
+            border-radius: 32px;
+            padding: 0 20px;
+        }
+
+        .privacy-card {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0ece7;
+            padding: 40px 44px;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: #1e2b2c;
+            border-left: 4px solid #e45c5c;
+            padding-left: 18px;
+        }
+
+        .privacy-section p, .privacy-section li {
+            color: #2e4a4f;
+            line-height: 1.6;
+            margin-bottom: 14px;
+            font-weight: 400;
+        }
+
+        .privacy-section ul {
+            margin: 12px 0 20px 30px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #fef4e8;
+            padding: 18px 24px;
+            border-radius: 20px;
+            margin: 24px 0;
+            border-left: 4px solid #e45c5c;
+        }
+
+        hr {
+            margin: 32px 0;
+            border: none;
+            height: 1px;
+            background: #ede6df;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1ede8;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #1e2b2c;
+            font-weight: 500;
+            transition: 0.2s;
+            margin-top: 24px;
+        }
+
+        .back-link:hover {
+            background: #e45c5c;
+            color: white;
+        }
+
+        /* footer */
+        .footer {
+            border-top: 1px solid #efe5de;
+            padding: 48px 0 32px;
+            background: #ffffff;
+            margin-top: 20px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #5a6e73;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .social-icons i {
+            font-size: 1.3rem;
+            margin-right: 16px;
+            color: #8d6b5c;
+            transition: 0.2s;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 48px;
+            color: #8b9aa0;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 750px) {
+            .privacy-card {
+                padding: 28px 20px;
+            }
+            .navbar {
+                justify-content: center;
+            }
+            .nav-links {
+                gap: 20px;
+            }
+            .privacy-header h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo-area" style="text-decoration: none;" id="homeLink">
+                <i class="fas fa-meteor logo-icon"></i>
+                <span class="brand-short">KAI</span>
+            </a>
+            <div class="nav-links">
+               <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+            </div>
+            <div class="header-icons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-user"></i>
+                <i class="fas fa-bag-shopping"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Privacy main section -->
+<div class="privacy-header">
+    <div class="container">
+        <h1><i class="fas fa-lock"></i> Privacy Policy</h1>
+        <div class="last-updated">Last updated: June 10, 2026 • version 2.1</div>
+    </div>
+</div>
+
+<div class="privacy-content">
+    <div class="privacy-card">
+        <div class="privacy-section">
+            <h2>1. Introduction & Scope</h2>
+            <p>KAI ("KAI", "we", "us", "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site"), make a purchase, or interact with our services. Please read this policy carefully. By using KAI, you consent to the data practices described herein.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>2. Information We Collect</h2>
+            <p>We may collect both personally identifiable information (PII) and non-personal data about you in various ways, including:</p>
+            <ul>
+                <li><strong>Account & Order Information:</strong> Name, email address, shipping/billing address, phone number, payment details (processed securely via third-party gateways).</li>
+                <li><strong>Browsing Data:</strong> IP address, browser type, device identifiers, pages visited, time spent, and referring URLs via cookies and analytics tools.</li>
+                <li><strong>Communications:</strong> Any correspondence you send to us via email, chat, or contact forms.</li>
+                <li><strong>Marketing Preferences:</strong> Your subscription status, preferences for newsletters, and responses to surveys.</li>
+            </ul>
+            <div class="highlight">
+                <i class="fas fa-database" style="margin-right: 10px; color:#e45c5c;"></i> 
+                <strong>Sensitive data:</strong> We do not intentionally collect sensitive personal data (e.g., health or biometric information). Payment card information is never stored on our servers — it is tokenized by our PCI-DSS compliant payment processor.
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected data for legitimate business purposes, including:</p>
+            <ul>
+                <li>Processing and fulfilling your orders, including shipping, returns, and customer support.</li>
+                <li>Improving our Site, products, and user experience through analytics and personalization.</li>
+                <li>Sending transactional emails (order confirmations, shipping updates, password resets).</li>
+                <li>Marketing communications where you have provided consent (e.g., newsletters, early access to collections).</li>
+                <li>Detecting fraud, security incidents, and legal compliance.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>4. Cookies & Tracking Technologies</h2>
+            <p>KAI uses cookies, web beacons, and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device. We use:</p>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Required for site functionality (cart, checkout).</li>
+                <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our Site (via services like Google Analytics).</li>
+                <li><strong>Preference Cookies:</strong> Remember your language and region settings.</li>
+                <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements and measure campaign performance.</li>
+            </ul>
+            <p>You may adjust your browser settings to refuse cookies, but some features of the Site may not work properly. By continuing to use KAI, you consent to our use of cookies as described.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>5. Sharing Your Information</h2>
+            <p>We never sell or rent your personal data to third parties. However, we may share information with trusted service providers who assist us in operating our business, subject to confidentiality agreements:</p>
+            <ul>
+                <li><strong>Shipping carriers</strong> (e.g., USPS, DHL, FedEx) to deliver your order.</li>
+                <li><strong>Payment processors</strong> (Stripe, PayPal) to securely handle transactions.</li>
+                <li><strong>Email & marketing platforms</strong> (Klaviyo, Mailchimp) to manage newsletters.</li>
+                <li><strong>Analytics providers</strong> (Google Analytics, Triple Whale) to analyze site traffic.</li>
+                <li><strong>Legal & regulatory authorities</strong> if required by law or to protect our rights.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>6. Data Retention & Security</h2>
+            <p>We retain your personal data only as long as necessary to fulfill the purposes outlined in this Privacy Policy, including legal, accounting, or reporting requirements. For example, order records are kept for 7 years to comply with tax laws. We implement appropriate technical and organizational measures — including encryption, firewalls, and access controls — to protect your data from unauthorized access, alteration, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+            <div class="highlight">
+                <i class="fas fa-shield-alt" style="margin-right: 10px; color:#e45c5c;"></i> 
+                <strong>Your responsibility:</strong> You are responsible for maintaining the confidentiality of your account password and for any activity under your account.
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>7. Your Privacy Rights (GDPR, CCPA, etc.)</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal data. These may include:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete information.</li>
+                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of your data, subject to legal obligations.</li>
+                <li><strong>Right to Restrict Processing:</strong> Limit how we use your data.</li>
+                <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell your data, but you may opt out of targeted advertising via cookie settings.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us at <strong>privacy@kai-editions.com</strong>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>8. Third-Party Links</h2>
+            <p>Our Site may contain links to external websites (e.g., maker profiles, social media). This Privacy Policy does not apply to those third-party sites. We encourage you to review their privacy policies before providing any personal information.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>9. Children's Privacy</h2>
+            <p>KAI does not knowingly collect or solicit personal information from anyone under the age of 16. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. We will take steps to delete such information.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>10. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The revised version will be indicated by an updated "Last updated" date. We encourage you to review this page periodically. Your continued use of KAI after any changes constitutes acceptance of the new Privacy Policy.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>11. Contact Us</h2>
+            <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data handling practices, please reach out to our Data Protection team:</p>
+            <p><i class="fas fa-envelope" style="margin-right: 8px; color:#e45c5c;"></i> <strong>Email:</strong> privacy@kai-editions.com<br>
+            <i class="fas fa-map-pin" style="margin-right: 8px; color:#e45c5c;"></i> <strong>Postal Address:</strong> KAI Privacy Office, 47 Bridge Street, Brooklyn, NY 11201, USA</p>
+        </div>
+
+        <hr>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <p style="color: #4b676d;">Your trust is our highest priority. We are committed to transparency and responsible data stewardship.</p>
+            <a href="#" class="back-link" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4><i class="fas fa-meteor"></i> KAI</h4>
+                <p>Objects for living slowly.<br>Est. 2025 — Kyoto & Brooklyn.</p>
+                <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#">Journal</a>
+                <a href="#">Studio visits</a>
+                <a href="#">Gift index</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">FAQs</a>
+                <a href="#">Returns</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="terms.html">Terms of Service</a>
+                <a href="#" style="color:#e45c5c; font-weight:500;">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 KAI — slow curation, modern soul.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Interactive: back to homepage navigation (redirects to root or homepage)
+    const backBtn = document.getElementById('backToHomeBtn');
+    const homeLink = document.getElementById('homeLink');
+    
+    function goToHomepage(e) {
+        if(e) e.preventDefault();
+        // In real environment, this would point to the homepage (index). For demo, redirect to root.
+        window.location.href = '/';
+        // Fallback / note: if on local file, you may see no effect, but typically in a live server it works.
+    }
+    
+    if(backBtn) backBtn.addEventListener('click', goToHomepage);
+    if(homeLink) homeLink.addEventListener('click', goToHomepage);
+    
+    // Optional interactive: shopping bag demo toast
+    const bagIcon = document.querySelector('.header-icons .fa-bag-shopping');
+    if(bagIcon) {
+        bagIcon.addEventListener('click', () => {
+            const toast = document.createElement('div');
+            toast.innerText = '🛒 Your cart awaits — discover KAI objects';
+            toast.style.position = 'fixed';
+            toast.style.bottom = '24px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = '#1e2b2c';
+            toast.style.color = 'white';
+            toast.style.padding = '12px 28px';
+            toast.style.borderRadius = '48px';
+            toast.style.fontWeight = '500';
+            toast.style.zIndex = '999';
+            toast.style.fontFamily = 'Onest, sans-serif';
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 1800);
+        });
+    }
+    
+    console.log("KAI Privacy Policy page — your data is respected.");
+</script>
+</body>
+</html>
